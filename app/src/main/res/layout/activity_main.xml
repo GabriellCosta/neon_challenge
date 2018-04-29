@@ -11,6 +11,7 @@
     android:id="@+id/img_main_user_image"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toTopOf="@+id/txt_main_user_name"
     android:src="@mipmap/ic_launcher_round"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"/>
@@ -18,7 +19,7 @@
   <TextView
     android:textColor="@color/simpleTextColor"
     android:id="@+id/txt_main_user_name"
-    app:layout_constraintTop_toBottomOf="@+id/img_main_user_image"
+    app:layout_constraintBottom_toTopOf="@+id/txt_main_user_email"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     android:text="@string/fixed_user_name"
@@ -28,12 +29,19 @@
   <TextView
     android:textColor="@color/simpleTextColor"
     android:id="@+id/txt_main_user_email"
-    app:layout_constraintTop_toBottomOf="@+id/txt_main_user_name"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     android:text="@string/fixe_user_email"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"/>
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toTopOf="@+id/guideline"/>
+
+  <android.support.constraint.Guideline
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/guideline"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.5"/>
 
   <android.support.v7.widget.AppCompatButton
     android:layout_marginLeft="20dp"
