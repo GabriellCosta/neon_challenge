@@ -18,11 +18,11 @@ class NeonCallAdapter<R>(private val responseType: Type) : CallAdapter<R, LiveDa
                 if (started.compareAndSet(false, true))
                     call.enqueue(object : Callback<R> {
                         override fun onFailure(call: Call<R>, t: Throwable) {
-                            postValue(ApiResponse(t))
+                            postValue(SimpleApiResponse(t))
                         }
 
                         override fun onResponse(call: Call<R>, response: Response<R>) {
-                            postValue(ApiResponse(response))
+                            postValue(SimpleApiResponse(response))
                         }
                     })
             }

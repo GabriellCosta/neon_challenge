@@ -2,10 +2,17 @@ package neon.gabrielcosta.gvcneon.network
 
 import retrofit2.Response
 
-class ApiResponse<out T> {
+interface ApiResponse<out T> {
 
     val body: T?
     val errorMessage: String?
+
+}
+
+class SimpleApiResponse<out T> : ApiResponse<T>{
+
+    override val body: T?
+    override val errorMessage: String?
 
     constructor(throwable: Throwable) {
         body = null
