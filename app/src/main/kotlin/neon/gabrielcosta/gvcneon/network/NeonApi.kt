@@ -9,13 +9,13 @@ import retrofit2.http.Query
 
 interface NeonApi {
 
-    @GET("/GenerateToken")
-    fun generateToken(@Query("name") name: String,
-        @Query("String") email: String): LiveData<ApiResponse<String>>
+    @GET("GenerateToken")
+    fun generateToken(@Query("nome") name: String,
+        @Query("email") email: String): LiveData<ApiResponse<String>>
 
-    @POST("/SendMoney")
+    @POST("SendMoney")
     fun sendMoney(request: SendMoneyDTO): LiveData<ApiResponse<Boolean>>
 
-    @GET("/GetTransfers")
+    @GET("GetTransfers")
     fun getTransfers(@Query("token") token: String): LiveData<ApiResponse<TransferResponseDTO>>
 }
