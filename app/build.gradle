@@ -28,6 +28,12 @@ android {
         test.java.srcDirs += 'src/test/kotlin'
         androidTest.java.srcDirs += 'src/androidTest/kotlin'
     }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
 }
 
 dependencies {
@@ -67,6 +73,7 @@ dependencies {
     // Testing
     testImplementation "junit:junit:$versions.junit"
     testImplementation "org.mockito:mockito-core:$versions.mockito"
+    testImplementation "org.robolectric:robolectric:3.8"
     androidTestImplementation "com.android.support.test:runner:$versions.testRunner"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$versions.espresso"
     androidTestImplementation "org.mockito:mockito-android:$versions.mockito"
