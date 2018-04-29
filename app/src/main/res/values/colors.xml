@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <color name="colorPrimary">#3F51B5</color>
-  <color name="colorPrimaryDark">#303F9F</color>
+  <color name="colorPrimary">#1F2A37</color>
+  <color name="colorPrimaryDark">#005082</color>
   <color name="colorAccent">#FF4081</color>
+
+  <color name="simpleTextColor">@android:color/white</color>
+  <color name="baseButtonColor">#00A7A8</color>
+  <color name="gradientStart">#1F2A37</color>
+  <color name="gradienCenter">#003B59</color>
+  <color name="gradientEnd">#005082</color>
+
 </resources>

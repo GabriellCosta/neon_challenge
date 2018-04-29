@@ -1,3 +1,7 @@
 <resources>
   <string name="app_name">GVCneon</string>
+  <string name="main_historic">HISTÓRICO DE ENVIOS</string>
+  <string name="main_send_money">ENVIAR DINHEIRO</string>
+  <string name="fixed_user_name">Gabriel Costa</string>
+  <string name="fixe_user_email">gabrielcosta08@gmail.com</string>
 </resources>
