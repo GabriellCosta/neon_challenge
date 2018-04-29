@@ -12,6 +12,7 @@ import neon.gabrielcosta.gvcneon.dagger.viewmodel.ViewModelFactoryModule;
 @Component(modules = {RetrofitModule.class,
         ViewModelModule.class,
         ServiceModule.class,
+        AppModule.class,
         ActivityModule.class,
         ViewModelFactoryModule.class,
         AndroidSupportInjectionModule.class})
