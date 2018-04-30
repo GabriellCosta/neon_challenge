@@ -2,7 +2,9 @@ package neon.gabrielcosta.gvcneon.ui
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import neon.gabrielcosta.gvcneon.R
 import neon.gabrielcosta.gvcneon.vm.MainViewModel
 
@@ -18,5 +20,10 @@ class MainActivity : BaseActivity() {
             .observe(this, Observer {
 
             })
+
+        findViewById<View>(R.id.btn_send_money)
+            .setOnClickListener {
+                startActivity(Intent(baseContext, PeopleListActivity::class.java))
+            }
     }
 }
