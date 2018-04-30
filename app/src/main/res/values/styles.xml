@@ -8,6 +8,7 @@
     <item name="colorAccent">@color/colorAccent</item>
     <item name="buttonStyle">@style/DefaultButton</item>
     <item name="android:windowBackground">@drawable/background_gradient</item>
+    <item name="colorControlNormal">@color/simpleTextColor</item>
   </style>
 
   <style name="DefaultButton" parent="Base.Widget.AppCompat.Button">
