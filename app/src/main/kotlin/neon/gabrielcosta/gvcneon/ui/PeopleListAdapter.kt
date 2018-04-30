@@ -10,12 +10,13 @@ import com.bumptech.glide.Glide
 import neon.gabrielcosta.gvcneon.R
 import neon.gabrielcosta.gvcneon.entity.vo.PersonVO
 
-class PeopleListAdapter(private val list: List<PersonVO>) :
+class PeopleListAdapter(private val list: List<PersonVO>, private val function: View.OnClickListener) :
     RecyclerView.Adapter<PeopleListAdapter.PeopleViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PeopleViewHolder {
         val inflate = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_list_people, parent, false)
+        inflate.setOnClickListener(function)
         return PeopleViewHolder(inflate)
     }
 

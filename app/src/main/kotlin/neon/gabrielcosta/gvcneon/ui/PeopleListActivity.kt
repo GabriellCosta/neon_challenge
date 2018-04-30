@@ -7,6 +7,7 @@ import android.support.v4.content.ContextCompat
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.view.View
 import neon.gabrielcosta.gvcneon.R
 import neon.gabrielcosta.gvcneon.entity.vo.PersonVO
 import neon.gabrielcosta.gvcneon.util.configureDefaultToolbar
@@ -18,7 +19,7 @@ class PeopleListActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_people)
         initViewModel()
-        configureDefaultToolbar( R.id.toolbar_people, getString(R.string.poeple_title))
+        configureDefaultToolbar(R.id.toolbar_people, getString(R.string.poeple_title))
     }
 
     private fun initViewModel() {
@@ -34,7 +35,12 @@ class PeopleListActivity : BaseActivity() {
 
     private fun initList(personVo: List<PersonVO>) {
         val recyclerView = findViewById<RecyclerView>(R.id.rv_people)
-        recyclerView.adapter = PeopleListAdapter(personVo)
+        recyclerView.adapter = PeopleListAdapter(personVo, View.OnClickListener {
+            val childLayoutPosition = recyclerView.getChildLayoutPosition(it)
+            val personVO = personVo[childLayoutPosition]
+            SendMoneyDialogFragment.getInstance(personVO)
+                .show(supportFragmentManager, "TAG")
+        })
         val linearLayoutManager = LinearLayoutManager(baseContext)
         recyclerView.layoutManager = linearLayoutManager
         val dividerItemDecoration = DividerItemDecoration(baseContext,
