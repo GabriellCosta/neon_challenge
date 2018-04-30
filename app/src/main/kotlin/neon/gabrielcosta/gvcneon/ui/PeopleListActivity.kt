@@ -9,6 +9,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import neon.gabrielcosta.gvcneon.R
 import neon.gabrielcosta.gvcneon.entity.vo.PersonVO
+import neon.gabrielcosta.gvcneon.util.configureDefaultToolbar
 import neon.gabrielcosta.gvcneon.vm.PeopleViewModel
 
 class PeopleListActivity : BaseActivity() {
@@ -17,6 +18,7 @@ class PeopleListActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_people)
         initViewModel()
+        configureDefaultToolbar( R.id.toolbar_people, getString(R.string.poeple_title))
     }
 
     private fun initViewModel() {

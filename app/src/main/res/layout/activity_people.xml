@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
-  android:layout_height="match_parent">
+  android:layout_height="match_parent"
+  >
+
+  <include
+    android:id="@+id/toolbar_people"
+    layout="@layout/toolbar"/>
 
   <android.support.v7.widget.RecyclerView
     android:id="@+id/rv_people"
@@ -13,6 +19,7 @@
     android:layout_marginEnd="15dp"
     android:layout_marginLeft="15dp"
     android:layout_marginRight="15dp"
+    app:layout_constraintTop_toBottomOf="@+id/toolbar_people"
     tools:layoutManager="android.support.v7.widget.GridLayoutManager"
     tools:listitem="@layout/item_list_people"
     tools:orientation="horizontal"
