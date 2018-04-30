@@ -46,6 +46,7 @@
   <android.support.v7.widget.AppCompatButton
     android:layout_marginLeft="20dp"
     android:layout_marginRight="20dp"
+    android:id="@+id/btn_send_money"
     android:text="@string/main_send_money"
     app:layout_constraintBottom_toTopOf="@+id/btn_main_history"
     android:layout_width="match_parent"
