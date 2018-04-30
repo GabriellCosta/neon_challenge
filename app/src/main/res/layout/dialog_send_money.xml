@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:padding="15dp"
+  android:background="#22586A">
+
+  <ImageButton
+    android:contentDescription="Fechar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:background="?android:selectableItemBackground"
+    android:src="@drawable/ic_close_black_24dp"
+    android:tint="@color/simpleTextColor"/>
+
+  <de.hdodenhof.circleimageview.CircleImageView
+    android:id="@+id/dialog_send_money_image"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    tools:src="@drawable/my_photo"/>
+
+  <TextView
+    android:id="@+id/dialog_send_money_name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:layout_marginLeft="15dp"
+    android:textColor="#00ADAD"
+    android:textSize="18sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/dialog_send_money_image"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/dialog_send_money_image"
+    tools:text="Gabriel Costa"/>
+
+  <TextView
+    android:id="@+id/dialog_send_money_phone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:layout_marginLeft="15dp"
+    android:textColor="#007A84"
+    android:textSize="18sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/dialog_send_money_image"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/dialog_send_money_name"
+    tools:text="(11) 12345-6789"/>
+
+  <TextView
+    android:id="@+id/txt_dialog_send_money_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:text="Valor a enviar"
+    android:textColor="@color/simpleTextColor"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/dialog_send_money_phone"/>
+
+  <EditText
+    android:id="@+id/edt_dialog_send_money"
+    android:textStyle="bold"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="@color/simpleTextColor"
+    android:gravity="center"
+    android:text="R$ 0,00"
+    android:textColor="@color/baseButtonColor"
+    android:textSize="28sp"
+    app:layout_constraintTop_toBottomOf="@+id/txt_dialog_send_money_label"/>
+
+  <Button
+    android:id="@+id/btn_dialog_sedn_money"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:text="ENVIAR"
+    app:layout_constraintTop_toBottomOf="@+id/edt_dialog_send_money"/>
+
+</android.support.constraint.ConstraintLayout>
