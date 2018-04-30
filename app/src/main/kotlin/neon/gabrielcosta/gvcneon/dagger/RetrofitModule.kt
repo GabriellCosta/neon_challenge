@@ -7,6 +7,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Named
 import javax.inject.Singleton
 
 @Module
@@ -14,13 +15,27 @@ class RetrofitModule {
 
     @Provides
     @Singleton
+    @Named("Base")
     fun provideRetrofit(): Retrofit {
-        return Retrofit.Builder()
+        return defaultRetrofitBuilder()
             .baseUrl("http://processoseletivoneon.neonhomol.com.br/")
+            .build()
+    }
+
+    @Provides
+    @Singleton
+    @Named("People")
+    fun providePeopleRetrofit(): Retrofit {
+        return defaultRetrofitBuilder()
+            .baseUrl("https://randomapi.com/api/")
+            .build()
+    }
+
+    private fun defaultRetrofitBuilder(): Retrofit.Builder {
+        return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(LiveDataCallAdapterFactory())
             .client(createLoggerInterceptor())
-            .build()
     }
 
     private fun createLoggerInterceptor(): OkHttpClient {
