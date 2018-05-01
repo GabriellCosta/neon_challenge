@@ -13,12 +13,16 @@ import javax.inject.Singleton
 @Module
 class RetrofitModule {
 
+    companion object {
+        var url: String? = null
+    }
+
     @Provides
     @Singleton
     @Named("Base")
     fun provideRetrofit(): Retrofit {
         return defaultRetrofitBuilder()
-            .baseUrl("http://processoseletivoneon.neonhomol.com.br/")
+            .baseUrl(url ?: "http://processoseletivoneon.neonhomol.com.br/")
             .build()
     }
 
@@ -27,7 +31,7 @@ class RetrofitModule {
     @Named("People")
     fun providePeopleRetrofit(): Retrofit {
         return defaultRetrofitBuilder()
-            .baseUrl("https://randomapi.com/api/")
+            .baseUrl(url ?: "https://randomapi.com/api/")
             .build()
     }
 
