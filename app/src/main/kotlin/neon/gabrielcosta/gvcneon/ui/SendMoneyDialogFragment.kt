@@ -31,7 +31,7 @@ class SendMoneyDialogFragment : DialogFragment() {
 
     override fun onStart() {
         super.onStart()
-        dialog.window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+        dialog?.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -55,7 +55,12 @@ class SendMoneyDialogFragment : DialogFragment() {
         //Glide.with(view).load(personVO.photo).into(image)
         name.text = personVO.name
         phone.text = personVO.phone
-        input.addTextChangedListener(ValorMonetarioWatcher())
+
+        val valorMonetarioWatcher = ValorMonetarioWatcher.Builder()
+            .comSimboloReal()
+            .comMantemZerosAoLimpar()
+            .build()
+        input.addTextChangedListener(valorMonetarioWatcher)
     }
 
     companion object {

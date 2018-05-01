@@ -73,6 +73,7 @@
     app:layout_constraintTop_toBottomOf="@+id/dialog_send_money_phone"/>
 
   <EditText
+    android:maxLines="1"
     android:id="@+id/edt_dialog_send_money"
     android:textStyle="bold"
     android:layout_width="match_parent"
@@ -82,8 +83,9 @@
     android:paddingBottom="10dp"
     android:background="@color/simpleTextColor"
     android:gravity="center"
-    android:text="R$ 0,00"
+    android:hint="R$ 0,00"
     android:textColor="@color/baseButtonColor"
+    android:textColorHint="@color/baseButtonColor"
     android:textSize="28sp"
     app:layout_constraintTop_toBottomOf="@+id/txt_dialog_send_money_label"/>
 
