@@ -2,6 +2,7 @@ package neon.gabrielcosta.gvcneon.dagger
 
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
+import neon.gabrielcosta.gvcneon.BaseFragmentTestActivity
 import neon.gabrielcosta.gvcneon.ui.MainActivity
 import neon.gabrielcosta.gvcneon.ui.PeopleListActivity
 import neon.gabrielcosta.gvcneon.ui.SendMoneyDialogFragment
@@ -12,8 +13,11 @@ abstract class ActivityModule {
     @ContributesAndroidInjector
     internal abstract fun contribute_MainActivity(): MainActivity
 
-    @ContributesAndroidInjector(modules =  [FragmentModule::class])
+    @ContributesAndroidInjector
     internal abstract fun contribute_PeopleListActivity(): PeopleListActivity
+
+    @ContributesAndroidInjector
+    internal abstract fun contribute_BaseFragmentTestActivity(): BaseFragmentTestActivity
 }
 
 @Module

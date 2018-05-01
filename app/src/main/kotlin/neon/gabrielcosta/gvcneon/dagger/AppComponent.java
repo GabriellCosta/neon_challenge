@@ -14,6 +14,7 @@ import neon.gabrielcosta.gvcneon.dagger.viewmodel.ViewModelFactoryModule;
         ServiceModule.class,
         AppModule.class,
         ActivityModule.class,
+        FragmentModule.class,
         ViewModelFactoryModule.class,
         AndroidSupportInjectionModule.class})
 @Singleton
