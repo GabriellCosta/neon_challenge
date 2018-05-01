@@ -9,6 +9,7 @@
   android:background="#22586A">
 
   <ImageButton
+    android:id="@+id/img_dialog_send_money_close"
     android:contentDescription="Fechar"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -83,7 +84,7 @@
     android:paddingBottom="10dp"
     android:background="@color/simpleTextColor"
     android:gravity="center"
-    android:hint="R$ 0,00"
+    android:text="R$ 0,00"
     android:textColor="@color/baseButtonColor"
     android:textColorHint="@color/baseButtonColor"
     android:textSize="28sp"

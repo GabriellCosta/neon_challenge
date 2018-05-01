@@ -20,6 +20,7 @@ class SendMoneyDialogFragment : DialogFragment() {
     private lateinit var name: TextView
     private lateinit var phone: TextView
     private lateinit var input: EditText
+    private lateinit var close: View
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +50,7 @@ class SendMoneyDialogFragment : DialogFragment() {
         name = view.findViewById(R.id.dialog_send_money_name)
         phone = view.findViewById(R.id.dialog_send_money_phone)
         input = view.findViewById(R.id.edt_dialog_send_money)
+        close = view.findViewById(R.id.img_dialog_send_money_close)
     }
 
     private fun initValues(view: View) {
@@ -61,6 +63,10 @@ class SendMoneyDialogFragment : DialogFragment() {
             .comMantemZerosAoLimpar()
             .build()
         input.addTextChangedListener(valorMonetarioWatcher)
+
+        close.setOnClickListener {
+            dismiss()
+        }
     }
 
     companion object {
