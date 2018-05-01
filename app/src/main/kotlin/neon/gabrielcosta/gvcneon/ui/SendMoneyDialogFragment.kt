@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import br.com.concrete.canarinho.watcher.ValorMonetarioWatcher
+import com.bumptech.glide.Glide
 import neon.gabrielcosta.gvcneon.R
 import neon.gabrielcosta.gvcneon.dagger.Injectable
 import neon.gabrielcosta.gvcneon.entity.vo.PersonVO
@@ -55,7 +56,7 @@ class SendMoneyDialogFragment : DialogFragment(), Injectable {
     }
 
     private fun initValues(view: View) {
-        //Glide.with(view).load(personVO.photo).into(image)
+        Glide.with(view).load(personVO.photo).into(image)
         name.text = personVO.name
         phone.text = personVO.phone
 
