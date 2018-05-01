@@ -10,9 +10,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import br.com.concrete.canarinho.watcher.ValorMonetarioWatcher
 import neon.gabrielcosta.gvcneon.R
+import neon.gabrielcosta.gvcneon.dagger.Injectable
 import neon.gabrielcosta.gvcneon.entity.vo.PersonVO
 
-class SendMoneyDialogFragment : DialogFragment() {
+class SendMoneyDialogFragment : DialogFragment(), Injectable {
 
     private lateinit var personVO: PersonVO
 
