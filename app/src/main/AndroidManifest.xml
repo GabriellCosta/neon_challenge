@@ -19,6 +19,7 @@
       </intent-filter>
     </activity>
     <activity android:name=".ui.PeopleListActivity" android:parentActivityName=".ui.MainActivity"/>
+    <activity android:name=".BaseFragmentTestActivity"/>
   </application>
 
 </manifest>
