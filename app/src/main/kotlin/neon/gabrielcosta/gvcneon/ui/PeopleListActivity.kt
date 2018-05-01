@@ -28,9 +28,17 @@ class PeopleListActivity : BaseActivity() {
             .fetchPeople()
             .observe(this, Observer {
                 if (it!!.body != null) {
-                    initList(it.body?.results!!)
+                    evaluateValue(it.body?.results!!)
                 }
             })
+    }
+
+    private fun evaluateValue(personVo: List<PersonVO>) {
+        if (personVo.isEmpty()) {
+            findViewById<View>(R.id.text_people_empty_state).visibility = View.VISIBLE
+        } else {
+
+        }
     }
 
     private fun initList(personVo: List<PersonVO>) {

@@ -11,6 +11,13 @@
     android:id="@+id/toolbar_people"
     layout="@layout/toolbar"/>
 
+  <include
+    android:visibility="gone"
+    android:id="@+id/text_people_empty_state"
+    layout="@layout/empty_state"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+
   <android.support.v7.widget.RecyclerView
     android:id="@+id/rv_people"
     android:layout_width="match_parent"

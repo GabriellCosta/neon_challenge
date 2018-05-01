@@ -11,4 +11,5 @@
   <string name="dialog_send_money_value_send">Valor a enviar</string>
   <string name="dialog_send_money_send_button">ENVIAR</string>
   <string name="dialog_send_money_input_hint">R$ 0,00</string>
+  <string name="people_list_empty_state">D = Você não tem ninguem para mandar dinheiro</string>
 </resources>
