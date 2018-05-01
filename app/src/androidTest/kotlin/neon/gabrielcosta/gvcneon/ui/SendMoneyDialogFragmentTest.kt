@@ -21,7 +21,7 @@ class SendMoneyDialogFragmentTest {
 
     @Before
     fun setup() {
-        val personVO = PersonVO(NAME, EMAIL, PHONE, IMAGE)
+        val personVO = PersonVO(NAME, EMAIL, PHONE, IMAGE, ID)
         val instance = SendMoneyDialogFragment.getInstance(personVO)
         rule.launchFragment(instance)
     }
@@ -50,6 +50,7 @@ class SendMoneyDialogFragmentTest {
         private const val EMAIL = "jon@gmail.com"
         private const val PHONE = "jon@gmail.com"
         private const val IMAGE = "jon@gmail.com"
+        private const val ID = 1L
     }
 
 }
