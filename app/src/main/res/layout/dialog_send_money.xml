@@ -10,7 +10,7 @@
 
   <ImageButton
     android:id="@+id/img_dialog_send_money_close"
-    android:contentDescription="Fechar"
+    android:contentDescription="@string/dialog_send_money_content_desc_close"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:padding="20dp"
@@ -65,7 +65,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="20dp"
-    android:text="Valor a enviar"
+    android:text="@string/dialog_send_money_value_send"
     android:textColor="@color/simpleTextColor"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
@@ -84,7 +84,7 @@
     android:paddingBottom="10dp"
     android:background="@color/simpleTextColor"
     android:gravity="center"
-    android:text="R$ 0,00"
+    android:hint="@string/dialog_send_money_input_hint"
     android:textColor="@color/baseButtonColor"
     android:textColorHint="@color/baseButtonColor"
     android:textSize="28sp"
@@ -95,7 +95,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="15dp"
-    android:text="ENVIAR"
+    android:text="@string/dialog_send_money_send_button"
     app:layout_constraintTop_toBottomOf="@+id/edt_dialog_send_money"/>
 
 </android.support.constraint.ConstraintLayout>

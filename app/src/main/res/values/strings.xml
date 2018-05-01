@@ -7,4 +7,8 @@
 
   <string name="fixed_user_name">Gabriel Costa</string>
   <string name="fixe_user_email">gabrielcosta08@gmail.com</string>
+  <string name="dialog_send_money_content_desc_close">Fechar</string>
+  <string name="dialog_send_money_value_send">Valor a enviar</string>
+  <string name="dialog_send_money_send_button">ENVIAR</string>
+  <string name="dialog_send_money_input_hint">R$ 0,00</string>
 </resources>
