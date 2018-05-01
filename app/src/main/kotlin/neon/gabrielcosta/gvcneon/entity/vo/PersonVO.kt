@@ -9,19 +9,22 @@ class PersonDTO(@SerializedName("results") val results: List<PersonVO>)
 data class PersonVO(@SerializedName("name") val name: String,
     @SerializedName("email") val email: String,
     @SerializedName("phone") val phone: String,
-    @SerializedName("image") val photo: String) : Parcelable {
+    @SerializedName("image") val photo: String,
+    @SerializedName("id") val id: Long) : Parcelable {
 
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
-        parcel.readString())
+        parcel.readString(),
+        parcel.readLong())
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(name)
         parcel.writeString(email)
         parcel.writeString(phone)
         parcel.writeString(photo)
+        parcel.writeLong(id)
     }
 
     override fun describeContents(): Int {
