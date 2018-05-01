@@ -12,6 +12,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
+//TODO: CREATE IDLINGRESOURCE TO TEST CLOSE DIALOG
 class SendMoneyDialogFragmentTest {
 
     @Rule
