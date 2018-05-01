@@ -3,6 +3,8 @@ package neon.gabrielcosta.gvcneon.model
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import neon.gabrielcosta.gvcneon.TokenManager
+import neon.gabrielcosta.gvcneon.entity.dto.SendMoneyDTO
+import neon.gabrielcosta.gvcneon.entity.vo.PersonVO
 import neon.gabrielcosta.gvcneon.network.ApiResponse
 import neon.gabrielcosta.gvcneon.network.NeonApi
 import neon.gabrielcosta.gvcneon.network.SimpleApiResponse
@@ -25,7 +27,7 @@ class NeonModel @Inject constructor(private val api: NeonApi,
 
             override fun onResponse(call: Call<String>, response: Response<String>) {
                 tokenManager.saveToken(response.body()!!)
-                mutableLiveData.postValue(object :  ApiResponse<Boolean> {
+                mutableLiveData.postValue(object : ApiResponse<Boolean> {
                     override val body: Boolean
                         get() = response.isSuccessful && response.body() != null
                     override val errorMessage: String?
@@ -38,4 +40,6 @@ class NeonModel @Inject constructor(private val api: NeonApi,
         return mutableLiveData
     }
 
+    fun sendMoney(personVO: PersonVO, value: Double) =
+        api.sendMoney(personVO.id, tokenManager.getToken(), value)
 }
